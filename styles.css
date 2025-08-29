@@ -1,0 +1,378 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header styles */
+.main-header {
+    background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+    color: white;
+    padding: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header-text h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+/* Navigation styles */
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .header-text h1 {
+        font-size: 2rem;
+    }
+    
+    .header-text h2 {
+        font-size: 1rem;
+    }
+    
+    .nav-bar ul {
+        gap: 1rem;
+    }
+    
+    .nav-bar a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Main content area */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Mutual Aid Groups Section */
+.mutual-aid-groups {
+    margin: 3rem 0;
+}
+
+.mutual-aid-groups h2 {
+    font-size: 2.2rem;
+    color: #2c5530;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Individual Cards */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(44, 85, 48, 0.1);
+    border: 2px solid #e8f5e8;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.2);
+    border-color: #4a7c59;
+}
+
+.card h3 {
+    color: #2c5530;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments for cards */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .mutual-aid-groups h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Interview Section */
+.interview-section {
+    margin: 4rem 0;
+    background: #f8fdf8;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+}
+
+.interview-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.interview-image {
+    flex: 0 0 300px;
+}
+
+.interview-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(44, 85, 48, 0.15);
+}
+
+.interview-content {
+    flex: 1;
+}
+
+.interview-content h2 {
+    color: #2c5530;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.interview-intro {
+    font-size: 1.1rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.question-answer {
+    margin-bottom: 2rem;
+}
+
+.question-answer h3 {
+    color: #2c5530;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.question-answer p {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #4a7c59;
+    font-style: italic;
+}
+
+/* Responsive design for interview section */
+@media (max-width: 768px) {
+    .interview-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .interview-image {
+        flex: none;
+        align-self: center;
+    }
+    
+    .interview-image img {
+        max-width: 350px;
+        height: 300px;
+    }
+    
+    .interview-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .interview-section {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Events Section */
+.events-section {
+    margin: 4rem 0 2rem 0;
+}
+
+.events-section h2 {
+    font-size: 2.2rem;
+    color: #2c5530;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+}
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-card {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(44, 85, 48, 0.1);
+    border: 2px solid #e8f5e8;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.2);
+    border-color: #4a7c59;
+}
+
+.event-date {
+    background: #2c5530;
+    color: white;
+    padding: 2rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-details {
+    padding: 2rem;
+    flex: 1;
+}
+
+.event-details h3 {
+    color: #2c5530;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.event-location {
+    color: #4a7c59;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.event-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.event-link {
+    color: #2c5530;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid #2c5530;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.event-link:hover {
+    background: #2c5530;
+    color: white;
+}
+
+/* Responsive design for events section */
+@media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-date {
+        min-width: auto;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .event-details {
+        padding: 1.5rem;
+    }
+    
+    .events-section h2 {
+        font-size: 1.8rem;
+    }
+}
